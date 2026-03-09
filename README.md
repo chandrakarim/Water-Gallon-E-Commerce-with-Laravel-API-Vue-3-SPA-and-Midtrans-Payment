@@ -706,7 +706,7 @@ ngrok http 8000
 ```
 ---
 
-Notes: untuk menjalankan projek ini, jika menggunakan Laragon silahkan menjalankan di terimnal sesuai alur di Running the Project atau Development URLs.
+Note: untuk menjalankan projek ini, jika menggunakan Laragon silahkan menjalankan di terminal sesuai alur di Running the Project atau Development URLs.
 
 ---
 
