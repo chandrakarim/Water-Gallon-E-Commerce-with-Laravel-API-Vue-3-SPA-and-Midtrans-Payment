@@ -69,6 +69,17 @@ Backend menggunakan **Laravel 12** dengan pendekatan **Laravel Best Practice Arc
 - Laravel Sanctum Authentication
 - Laravel Policy Authorization
 
+### Requirements
+
+Pastikan environment berikut sudah terinstall:
+
+- PHP >= 8.2
+- Composer
+- Node.js >= 18
+- PostgreSQL
+- Laragon / XAMPP / Local Server
+- Ngrok (untuk webhook Midtrans)
+
 ### Laravel Best Practice Architecture
 
 Struktur backend dipisahkan berdasarkan tanggung jawab masing-masing layer:
@@ -344,7 +355,7 @@ Controller
 Service Layer
      │
      ▼
-Model
+   Model
 ```
 
 ---
@@ -508,7 +519,6 @@ MIDTRANS_SERVER_KEY=Mid-server-xxxxxxxxxxxxxxxx
 MIDTRANS_CLIENT_KEY=Mid-client-xxxxxxxxxxxxxxxx
 MIDTRANS_IS_PRODUCTION=false
 
-FRONTEND_URL=http://localhost:5173
 ```
 
 Jika belum memiliki API Midtrans silakan daftar akun di:
@@ -525,6 +535,10 @@ Kemudian ambil **Server Key** dan **Client Key** di **Dashboard Sandbox Midtrans
 Masuk ke folder backend-api:
 
 ```
+git clone https://github.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment.git
+
+cd Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment
+
 cd backend-api
 ```
 
@@ -568,22 +582,78 @@ http://127.0.0.1:8000
 
 ---
 
-# Jalankan Ngrok (Webhook Midtrans)
+# Midtrans Webhook Setup (Ngrok)
 
+Saat menggunakan **Midtrans Sandbox**, backend lokal tidak dapat menerima callback dari server Midtrans secara langsung.  
+Untuk mengatasinya kita menggunakan **Ngrok** agar server lokal dapat diakses oleh Midtrans.
+
+Ngrok akan membuat **public URL** yang mengarah ke server lokal kita.
+
+---
+
+## Jalankan Ngrok
+
+Masuk ke folder backend terlebih dahulu:
+
+```bash
+cd backend-api
 ```
+
+Kemudian jalankan Ngrok untuk membuka akses ke server Laravel yang berjalan di port **8000**:
+
+```bash
 ngrok http 8000
 ```
 
-Contoh URL:
+---
+
+## Contoh URL Ngrok
+
+Setelah menjalankan perintah di atas, Ngrok akan memberikan URL publik seperti berikut:
 
 ```
 https://xxxx.ngrok.io
 ```
 
-Callback Midtrans:
+URL ini akan digunakan oleh **Midtrans untuk mengirim webhook callback**.
+
+---
+
+## Midtrans Callback URL
+
+Tambahkan endpoint callback berikut di **Midtrans Dashboard**:
 
 ```
 https://xxxx.ngrok.io/api/midtrans/callback
+```
+
+Endpoint ini akan menerima **notifikasi pembayaran dari Midtrans** seperti:
+
+- Payment Success
+- Payment Pending
+- Payment Failed
+- Payment Expired
+
+Laravel backend kemudian akan **memproses callback tersebut dan mengupdate status order di database**.
+
+---
+
+## Alur Webhook Midtrans
+
+```
+Customer Checkout
+        ↓
+Frontend Request Snap Token
+        ↓
+Midtrans Payment Popup
+        ↓
+Customer Melakukan Pembayaran
+        ↓
+Midtrans Mengirim Callback
+        ↓
+Ngrok Meneruskan ke Backend Lokal
+        ↓
+Laravel Update Status Order
 ```
 
 ---
@@ -666,47 +736,47 @@ Fullstack Web Development Project
 ## Example Home Tentang
 ![Home_tentang](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Home_tentang.png)
 
-## Customer - Product
+## Example Customer - Product
 ![Customer_product](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_product.png)
 
-## Customer - Pesanan Saya
+## Example Customer - Pesanan Saya
 ![Customer_pesanan_saya](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_pesanan_saya.png)
 
-## Customer - Detail Pesanan
+## Example Customer - Detail Pesanan
 ![Customer_pesanan_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_pesanan_detail.png)
 
-## Customer - Tracking Pesanan
+## Example Customer - Tracking Pesanan
 ![Customer_tracking](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_tracking.png)
 
-## Customer - Keranjang
+## Example Customer - Keranjang
 ![Customer_keranjang](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_keranjang.png)
 
-## Customer - Address
+## Example Customer - Address
 ![Customer_address](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_address.png)
 
-## Courier - Dashboard
+## Example Courier - Dashboard
 ![Courier_dashboard](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Courier_dashboard.png)
 
-## Courier - Assign Orders
+## Example Courier - Assign Orders
 ![Courier_Assign_orders](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Courier_Assign_orders.png)
 
-## Courier - Assign Orders Detail
+## Example Courier - Assign Orders Detail
 ![Courier_Assign_orders_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Courier_Assign_orders_detail.png)
 
-## Admin - Dashboard
+## Example Admin - Dashboard
 ![Admin_dashboard](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_dashboard.png)
 
-## Admin - Products
+## Example Admin - Products
 ![Admin_products](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_products.png)
 
-## Admin - Orders
+## Example Admin - Orders
 ![Admin_Orders](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_Orders.png)
 
-## Admin - Orders Detail
+## Example Admin - Orders Detail
 ![Admin_orders_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_orders_detail.png)
 
-## Admin - Deliveries Management
+## Example Admin - Deliveries Management
 ![Admin_deliveries_management](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_deliveries_management.png)
 
-## Admin - Deliveries Management Detail
+## Example Admin - Deliveries Management Detail
 ![Admin_deliveries_management_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_deliveries_management_detail.png)
