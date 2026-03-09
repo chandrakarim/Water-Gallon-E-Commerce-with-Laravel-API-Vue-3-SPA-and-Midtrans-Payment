@@ -547,4 +547,47 @@ Fullstack Web Development Project
 ## Example Home Tentang
 ![Home_tentang](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Home_tentang.png)
 
-## Example Dashboard Admin Data Kota
+## Customer - Product
+![Customer_product](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_product.png)
+
+## Customer - Pesanan Saya
+![Customer_pesanan_saya](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_pesanan_saya.png)
+
+## Customer - Detail Pesanan
+![Customer_pesanan_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_pesanan_detail.png)
+
+## Customer - Tracking Pesanan
+![Customer_tracking](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_tracking.png)
+
+## Customer - Keranjang
+![Customer_keranjang](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_keranjang.png)
+
+## Customer - Address
+![Customer_address](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Customer_address.png)
+
+## Courier - Dashboard
+![Courier_dashboard](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Courier_dashboard.png)
+
+## Courier - Assign Orders
+![Courier_Assign_orders](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Courier_Assign_orders.png)
+
+## Courier - Assign Orders Detail
+![Courier_Assign_orders_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Courier_Assign_orders_detail.png)
+
+## Admin - Dashboard
+![Admin_dashboard](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_dashboard.png)
+
+## Admin - Products
+![Admin_products](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_products.png)
+
+## Admin - Orders
+![Admin_Orders](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_Orders.png)
+
+## Admin - Orders Detail
+![Admin_orders_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_orders_detail.png)
+
+## Admin - Deliveries Management
+![Admin_deliveries_management](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_deliveries_management.png)
+
+## Admin - Deliveries Management Detail
+![Admin_deliveries_management_detail](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Admin_deliveries_management_detail.png)
