@@ -177,10 +177,28 @@ Metode yang tersedia:
 1. Customer melakukan **register atau login**.
 2. Customer melihat **daftar produk galon**.
 3. Customer menambahkan produk ke **cart**.
+
+![Screenshot_1](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_1.png)
+
 4. Customer melakukan **checkout**.
+
+![Screenshot_2](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_2.png)
+
 5. Customer memilih metode pembayaran:
    - COD
    - Midtrans Payment
+- Note untuk pengujian metode pembayaran : Midtrans Payment
+
+![Screenshot_3](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_3.png)
+
+- untuk ujicoba metode pembayaran bisa menggunakan link di bawah ini
+```
+https://simulator.sandbox.midtrans.com/bca/va/index
+```
+![Screenshot_4](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_4.png)
+
+![Screenshot_5](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_5.png)
+
 6. Sistem membuat order dengan status:
 
 ```
@@ -192,6 +210,7 @@ atau
 ```
 WAITING_ASSIGN
 ```
+![Screenshot_6](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_6.png)
 
 7. Jika pembayaran Midtrans berhasil maka order berubah menjadi:
 
@@ -199,19 +218,36 @@ WAITING_ASSIGN
 WAITING_ASSIGN
 ```
 
+![Screenshot_7](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_7.png)
+
 ---
 
 ## Admin Flow
 
 1. Admin login ke dashboard.
 2. Admin melihat daftar pesanan customer.
+
+![Screenshot_8](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_8.png)
+
 3. Admin memilih pesanan yang sudah dibayar.
 4. Admin melakukan **assign courier**.
+
+![Screenshot_9](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_9.png)
 5. Status order berubah menjadi:
 
 ```
 ASSIGNED
 ```
+- jika kurir sudah berhasil mengirim barang sampai tujuan,maka di halaman admin menu Deliveries status akan berubah menjadi
+![Screenshot_14](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_14.png) 
+```
+DELIVERED
+```
+![Screenshot_15](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_15.png) 
+
+![Screenshot_16](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_16.png) 
+
+![Screenshot_17](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_17.png) 
 
 ---
 
@@ -219,7 +255,12 @@ ASSIGNED
 
 1. Courier login ke dashboard.
 2. Courier melihat daftar pesanan yang sudah diassign.
+
+![Screenshot_10](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_10.png)
+
 3. Courier melakukan **pickup barang dari depot**.
+
+![Screenshot_11](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_11.png)
 
 Status berubah menjadi:
 
@@ -229,13 +270,15 @@ PICKED_UP
 
 4. Courier mengantar pesanan ke customer.
 
+![Screenshot_12](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_12.png)
 Status berubah menjadi:
 
 ```
 DELIVERED
 ```
+![Screenshot_13](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_13.png)
 
-Jika pembayaran **COD**, maka pembayaran dilakukan saat delivery.
+Jika pembayaran **COD**, maka pembayaran dilakukan saat delivery (Pesanan sampai).
 
 ---
 
