@@ -59,16 +59,61 @@ Midtrans Snap Payment Gateway
 
 ## Backend
 
-Backend menggunakan **Laravel 12** dengan pendekatan best practice.
+Backend menggunakan **Laravel 12** dengan pendekatan **Laravel Best Practice Architecture** untuk menjaga kode tetap terstruktur, scalable, dan mudah di maintenance.
+
+### Core Technology
 
 - Laravel 12 REST API
 - PostgreSQL Database
 - Midtrans Snap Payment Gateway
 - Laravel Sanctum Authentication
 - Laravel Policy Authorization
-- Service Layer Architecture
-- Form Request Validation
-- API Resource Transformer
+
+### Laravel Best Practice Architecture
+
+Struktur backend dipisahkan berdasarkan tanggung jawab masing-masing layer:
+
+- **Controllers**  
+  Mengatur alur request dan response API.
+
+- **Form Requests**  
+  Validasi data request menggunakan Laravel Form Request.
+
+- **Services**  
+  Berisi business logic aplikasi agar controller tetap bersih.
+
+- **API Resources**  
+  Mengatur format response API agar konsisten.
+
+- **Policies**  
+  Mengatur authorization atau hak akses user terhadap resource.
+
+- **Observers**  
+  Meng-handle event model seperti created, updated, deleted.
+
+- **Helpers**  
+  Berisi fungsi helper global yang digunakan di berbagai bagian aplikasi.
+
+### Backend Architecture Layer
+
+```
+Controller
+   ↓
+Request Validation
+   ↓
+Service Layer
+   ↓
+Model / Database
+   ↓
+API Resource Response
+```
+
+Pendekatan ini membuat kode lebih:
+
+- Modular
+- Maintainable
+- Scalable
+- Clean Architecture
 
 ---
 
@@ -451,15 +496,34 @@ POST /api/midtrans/callback
 ```
 
 ---
+# Midtrans Configuration
 
+Tambahkan konfigurasi berikut pada file `.env` di backend Laravel.
+
+```env
+# Midtrans Config
+MIDTRANS_SERVER_KEY=Mid-server-xxxxxxxxxxxxxxxx
+MIDTRANS_CLIENT_KEY=Mid-client-xxxxxxxxxxxxxxxx
+MIDTRANS_IS_PRODUCTION=false
+
+FRONTEND_URL=http://localhost:5173
+```
+
+Jika belum memiliki API Midtrans silakan daftar akun di:
+
+https://midtrans.com/id
+
+Kemudian ambil **Server Key** dan **Client Key** di **Dashboard Sandbox Midtrans**.
+
+---
 # Running the Project
 
 ## 1 Jalankan Backend
 
-Masuk ke folder backend:
+Masuk ke folder backend-api:
 
 ```
-cd backend
+cd backend-api
 ```
 
 Install dependency:
@@ -484,6 +548,8 @@ Migration database:
 
 ```
 php artisan migrate
+php artisan db:seed
+
 ```
 
 Run server:
@@ -522,10 +588,10 @@ https://xxxx.ngrok.io/api/midtrans/callback
 
 # Jalankan Frontend
 
-Masuk ke folder frontend:
+Masuk ke folder frontend-app:
 
 ```
-cd frontend
+cd frontend-app
 ```
 
 Install dependency:
@@ -561,6 +627,14 @@ Frontend
 ```
 http://localhost:5173
 ```
+Jalankan Ngrok (Webhook Midtrans)
+
+```
+ngrok http 8000
+```
+---
+
+Notes: untuk menjalankan projek ini, jika menggunakan Laragon silahkan menjalankan di terimnal sesuai alur di Running the Project atau Development URLs.
 
 ---
 
