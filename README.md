@@ -283,11 +283,13 @@ WAITING_ASSIGN
 ```
 ASSIGNED
 ```
-- jika kurir sudah berhasil mengirim barang sampai tujuan,maka di halaman admin menu Deliveries status akan berubah menjadi Delivered
-![Screenshot_14](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_14.png) 
+- jika kurir sudah berhasil mengirim barang sampai tujuan,maka di halaman admin menu Deliveries status akan berubah menjadi :
 ```
 DELIVERED
 ```
+
+![Screenshot_14](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_14.png) 
+
 ![Screenshot_15](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_15.png) 
 
 ![Screenshot_16](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Screenshot_16.png) 
