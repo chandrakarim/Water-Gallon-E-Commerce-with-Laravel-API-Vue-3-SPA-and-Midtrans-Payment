@@ -534,6 +534,17 @@ Pengembangan yang dapat ditambahkan:
 ---
 
 # Author
-
+Chandra Karim
 Water Gallon Delivery System  
 Fullstack Web Development Project
+
+## Example Home
+![Home](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Home.png)
+
+## Example Home Product
+![Home_product](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Home_product.png)
+
+## Example Home Tentang
+![Home_tentang](https://raw.githubusercontent.com/chandrakarim/Water-Gallon-E-Commerce-with-Laravel-API-Vue-3-SPA-and-Midtrans-Payment/main/Home_tentang.png)
+
+## Example Dashboard Admin Data Kota
